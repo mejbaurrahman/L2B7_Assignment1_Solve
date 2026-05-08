@@ -21,7 +21,6 @@ function checkType(value: StringOrNumber): string {
 
 // problem -4 solution
 
-const user = { id: 1, name: "John Doe", age: 21 };
 function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 }
@@ -39,12 +38,6 @@ function toggleReadStatus(book: Book): Book & { isRead: boolean } {
     isRead: true,
   };
 }
-
-const myBook: Book = {
-  title: "TypeScript Guide",
-  author: "Jane Doe",
-  publishedYear: 2024,
-};
 
 // problem -6 solution
 class Person {
