@@ -59,7 +59,7 @@ const value = getFirst([1, 2, 3]);
 value.toUpperCase(); // Error
 ```
 
-Here, `value` is a number, so TypeScript prevents using a string method.
+Here, value is a number, so TypeScript prevents using a string method.
 
 This keeps the code type-safe while still being reusable.
 

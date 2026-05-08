@@ -1,10 +1,10 @@
 # Why is any labeled a "type safety hole," and why is unknown the safer choice for handling unpredictable data? Explain the concept of type narrowing
 
-# Why is `any` called a "type safety hole"?
+# Why is any called a "type safety hole"?
 
-`any` disables TypeScript's type checking.
+any disables TypeScript's type checking.
 
-When a variable uses `any`, TypeScript allows any operation on it without checking for errors.
+When a variable uses any, TypeScript allows any operation on it without checking for errors.
 
 Example:
 
@@ -14,14 +14,14 @@ let data: any = "Hello";
 data.toFixed(2); // No error in TypeScript
 ```
 
-Here, `"Hello"` is a string, but `toFixed()` is a number method.  
-TypeScript does not stop the mistake because the type is `any`.
+Here, "Hello" is a string, but toFixed() is a number method.  
+TypeScript does not stop the mistake because the type is any.
 
 ---
 
-# Why is `unknown` safer?
+# Why is unknown safer?
 
-`unknown` can also store any type of value, but TypeScript does not allow unsafe usage directly.
+unknown can also store any type of value, but TypeScript does not allow unsafe usage directly.
 
 Example:
 
@@ -39,9 +39,9 @@ if (typeof data === "string") {
 }
 ```
 
-Now TypeScript knows `data` is a string, it is safe to use.
+Now TypeScript knows data is a string, it is safe to use.
 
-Because of this extra checking, `unknown` is safer than `any`.
+Because of this extra checking, unknown is safer than any.
 
 ---
 
@@ -59,7 +59,7 @@ if (typeof value === "string") {
 }
 ```
 
-At first, `value` is `unknown`.
+At first, value is unknown.
 
 After this check:
 
@@ -67,12 +67,12 @@ After this check:
 typeof value === "string";
 ```
 
-TypeScript narrows the type from `unknown` to `string`.
+TypeScript narrows the type from unknown to string.
 
 This process is called **type narrowing**.
 
 Common ways to narrow types:
 
-- `typeof`
-- `instanceof`
+- typeof
+- instanceof
 - Custom checks
