@@ -1,3 +1,5 @@
+# Why is any labeled a "type safety hole," and why is unknown the safer choice for handling unpredictable data? Explain the concept of type narrowing
+
 # Why is `any` called a "type safety hole"?
 
 `any` disables TypeScript's type checking.
@@ -37,7 +39,7 @@ if (typeof data === "string") {
 }
 ```
 
-Now TypeScript knows `data` is a string, so it is safe to use.
+Now TypeScript knows `data` is a string, it is safe to use.
 
 Because of this extra checking, `unknown` is safer than `any`.
 
